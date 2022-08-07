@@ -30,6 +30,7 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
+  - [Contribution](#how-to-contribute)
   - [Tests](#tests)
   
   ## Installation
@@ -47,7 +48,6 @@ function generateMarkdown(data) {
   ## How to Contribute
 
   ${data.contribute}
-
   
   ## Tests
   
