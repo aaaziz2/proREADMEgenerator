@@ -1,8 +1,8 @@
 const licenseInfo = [
-    {MIT, name:'MIT License', badge: '', link: ''},
-    {GNU, name:'GNU GPLv3 License',badge: '', link: ''},
-    {ISC, name:'ISC License', badge:'', link:''},
-    {APA, name:'Apache License 2.0', badge:'', link:''}
+    {id:'MIT', name:'MIT License', badge: '', link: ''},
+    {id:'GNU', name:'GNU GPLv3 License',badge: '', link: ''},
+    {id:'ISC', name:'ISC License', badge:'', link:''},
+    {id:'APA', name:'Apache License 2.0', badge:'', link:''}
 ]
 
 
@@ -10,7 +10,11 @@ const licenseInfo = [
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if(license){
-    return license.badge
+    for(licenses of licenseInfo){
+      if(license == licenses.id){
+        return licenses.badge
+      }
+    }
   }
   else{
     return ''
@@ -21,7 +25,11 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license){
-    return license.link
+    for(licenses of licenseInfo){
+      if(license == licenses.id){
+        return licenses.link
+      }
+    }
   }
   else{
     return ''
@@ -32,7 +40,11 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if(license){
-    return license.name
+    for(licenses of licenseInfo){
+      if(license == licenses.id){
+        return licenses.name
+      }
+    }
   }
   else{
     return ''
@@ -83,4 +95,4 @@ function generateMarkdown(data) {
   `
 }
 
-module.exports = generateMarkdown;
+module.exports = {generateMarkdown}

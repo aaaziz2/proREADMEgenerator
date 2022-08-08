@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const md = require('./utils/generateMarkdown')
+const util = require('./utils/generateMarkdown.js')
 
 // TODO: Create an array of questions for user input
 const questions = [ 'What is the title of the project?','Provide a short description',
@@ -61,14 +61,15 @@ function init() {
         message: questions[7],
       },
       {
-        type: 'input',
+        type: 'list',
         name: 'license',
+        choices:['MIT','GNU','ISC','APA'],
         message: questions[8],
       },
       
     ])
     .then((data) => {
-        let file = md.generateMarkdown(data)
+        let file = util.generateMarkdown(data)
         writeToFile('README.md',file)
     });
     
