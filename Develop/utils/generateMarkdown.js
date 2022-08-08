@@ -1,8 +1,8 @@
 const licenseInfo = [
-    {id:'MIT', name:'MIT License', badge: '', link: ''},
-    {id:'GNU', name:'GNU GPLv3 License',badge: '', link: ''},
-    {id:'ISC', name:'ISC License', badge:'', link:''},
-    {id:'APA', name:'Apache License 2.0', badge:'', link:''}
+    {id:'MIT', name:'MIT License', badge: `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`, link: 'https://opensource.org/licenses/MIT'},
+    {id:'GNU', name:'GNU GPLv3 License',badge: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)', link: 'https://www.gnu.org/licenses/gpl-3.0'},
+    {id:'ISC', name:'ISC License', badge:'[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)', link:'https://opensource.org/licenses/ISC'},
+    {id:'APA', name:'Apache License 2.0', badge:`[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`, link:'https://opensource.org/licenses/Apache-2.0'}
 ]
 
 
@@ -90,7 +90,7 @@ function generateMarkdown(data) {
           
   ## Questions?
 
-  ${data.github}
+  ${data.github} \n
   Please reach out to me at ${data.email}
   `
 }
