@@ -1,3 +1,4 @@
+// information for all the license options provided 
 const licenseInfo = [
     {id:'MIT', name:'MIT License', badge: `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`, link: 'https://opensource.org/licenses/MIT'},
     {id:'GNU', name:'GNU GPLv3 License',badge: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)', link: 'https://www.gnu.org/licenses/gpl-3.0'},
@@ -10,6 +11,7 @@ const licenseInfo = [
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if(license){
+    // checks every license until it finds the right one
     for(licenses of licenseInfo){
       if(license == licenses.id){
         return licenses.badge

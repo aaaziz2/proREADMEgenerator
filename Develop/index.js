@@ -1,6 +1,9 @@
 // TODO: Include packages needed for this application
+// Inquirer to ask questions
 const inquirer = require('inquirer');
+// fs to write/create our file
 const fs = require('fs');
+// to import method from the generateMarkdown file
 const util = require('./utils/generateMarkdown.js')
 
 // TODO: Create an array of questions for user input
@@ -69,7 +72,9 @@ function init() {
       
     ])
     .then((data) => {
+        // generate markdown text using the imported method
         let file = util.generateMarkdown(data)
+        // create and write to the file
         writeToFile('README.md',file)
     });
     
